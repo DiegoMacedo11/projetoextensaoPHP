@@ -1,0 +1,595 @@
+body {
+    margin: 0;
+    font: 16px Arial, Tahoma;
+    background-color: #e6f7ff;
+    /* Soft blue background */
+}
+
+header {
+    background-color: #6fa3ef;
+    /* Calming blue-green */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #FFF;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a i {
+    margin-right: 5px;
+}
+
+header nav ul li a:hover {
+    color: #4d84cb;
+    /* Darker blue on hover */
+}
+
+main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #6fa3ef;
+}
+
+article {
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: white;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #6fa3ef;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+    /* Scale up on hover */
+}
+
+.grid-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover::before {
+    opacity: 1;
+    /* Overlay on hover */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #6fa3ef;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #b6d7ee;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4d84cb;
+    /* Highlight border on focus */
+}
+
+button {
+    border: 0;
+    background: #6fa3ef;
+    padding: 12px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #4d84cb;
+    /* Darker blue on hover */
+}
+
+footer {
+    background-color: #6fa3ef;
+    color: #FFF;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Estilos para a seção de introdução */
+.introduction {
+    background-color: #6fa3ef;
+    color: #FFF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.introduction h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    /* Cor branca para o título */
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease;
+}
+
+.introduction p {
+    font-size: 1.4em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0;
+    /* Cor branca ou outra cor clara para o texto */
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.introduction h2,
+.introduction section h2 {
+    color: white;
+    /* Cor azul do tema principal */
+    margin-bottom: 10px;
+}
+
+/* Adicionando borda inferior para destacar os títulos */
+.introduction h2::after,
+.introduction section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #6fa3ef;
+    /* Cor azul do tema principal */
+    margin-top: 8px;
+}
+
+/* Estilos para o Footer */
+footer {
+    background-color: #6fa3ef;
+    color: #FFF;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #4d84cb;
+}
+
+.footer-bottom {
+    background-color: #4d84cb;
+    padding: 10px 0;
+    color: #FFF;
+}
+
+/* Adicionando efeito de hover usando hover.css */
+.footer-section:hover .hvr-grow {
+    transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+}
+
+.footer-section:hover .hvr-shrink {
+    transform: scale(0.9); /* Diminui a escala ao passar o mouse */
+}
+
+.footer-section:hover .hvr-bob {
+    animation: hvr-bob 0.3s ease-in-out both; /* Animação de balanço ao passar o mouse */
+}
+
+.footer-section a:hover {
+    background-color: #4d84cb; /* Cor de fundo do link ao passar o mouse */
+    animation: hvr-bounce-in 0.3s ease-in-out both; /* Animação de salto ao passar o mouse */
+}
+
+
+
+
+
+
+.grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.coluna {
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coluna img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    margin-left: 105px;
+}
+
+.coluna:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.coluna:hover img {
+    transform: scale(1.05);
+}
+
+.coluna-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.coluna:hover .coluna-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.coluna-overlay strong,
+.coluna-overlay p,
+.coluna-overlay a {
+    transition: transform 0.3s ease;
+}
+
+.coluna:hover .coluna-overlay strong,
+.coluna:hover .coluna-overlay p,
+.coluna:hover .coluna-overlay a {
+    transform: translateY(0);
+}
+
+.coluna-overlay strong {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.coluna-overlay p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.coluna-overlay a {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.coluna-overlay a:hover {
+    color: #4d84cb;
+}
+
+.coluna p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.coluna p strong {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.coluna p span {
+    color: #777;
+}
+
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as colunas horizontalmente */
+    padding: 20px;
+}
+
+.coluna2 {
+    position: relative;
+    width: 300px; /* Largura desejada para cada coluna */
+    margin: 15px;
+    overflow: hidden;
+    background-color: #fff; /* Cor de fundo da coluna */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo dentro da coluna */
+}
+
+.coluna2 img {
+    width: 100%; /* Ajusta a largura da imagem para ocupar 100% da largura da coluna */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: transform 0.3s ease; /* Adiciona transição para suavizar o efeito */
+}
+
+.coluna2 p {
+    margin: 15px 0;
+    margin-bottom: 38px;
+}
+
+.coluna2 p strong {
+    color: #333; /* Cor do texto forte (nome) */
+    font-size: 1.2em; /* Tamanho da fonte do texto forte */
+    margin-bottom: 5px; /* Adicionar espaço abaixo do texto forte */
+    display: block; /* Fazer com que o texto forte se comporte como um bloco */
+}
+
+.coluna2 p span {
+    color: #777; /* Cor do texto do valor */
+    font-size: 1em; /* Tamanho da fonte do texto do valor */
+}
+
+.coluna2 a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #6fa3ef; /* Cor de fundo do link */
+    color: #fff; /* Cor do texto do link */
+    text-decoration: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: background-color 0.3s ease; /* Adiciona transição para suavizar o efeito */
+}
+
+.coluna2:hover img {
+    transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+}
+
+.coluna2:hover a {
+    background-color: #4d84cb; /* Cor de fundo do link ao passar o mouse */
+}
+
+/* Adicionando efeito de balanço */
+@keyframes hvr-bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.coluna2:hover .hvr-bob {
+    animation: hvr-bob 0.3s ease-in-out both; /* Animação de balanço ao passar o mouse */
+}
+
+
+
+.grid3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna3 img {
+    width: 100%; /* Ajusta a largura da imagem para ocupar 100% da largura da coluna */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Adiciona transição para suavizar o efeito */
+}
+
+.coluna4 {
+    padding: 20px;
+    text-align: left;
+}
+
+.coluna4 h2 {
+    color: #333; /* Cor do título */
+    font-size: 2em; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.coluna4 p {
+    color: #777; /* Cor do texto */
+    font-size: 1.2em; /* Tamanho da fonte do texto */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Adicionando efeito de zoom na imagem ao passar o mouse */
+.coluna3:hover img {
+    transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+}
+
+/* Adicionando efeito de fade-in nos elementos da coluna4 */
+.coluna4 h2,
+.coluna4 p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.grid3:hover .coluna4 h2,
+.grid3:hover .coluna4 p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.coluna a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #6fa3ef; /* Cor de fundo do link */
+    color: #fff; /* Cor do texto do link */
+    text-decoration: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: background-color 0.3s ease; /* Adiciona transição para suavizar o efeito */
+}
+.coluna :hover a {
+    background-color: #4d84cb; /* Cor de fundo do link ao passar o mouse */
+}
